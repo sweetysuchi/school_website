@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingsbridge Acadamy</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="./node_modules/emailjs-com/dist/email.min.js"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('nav').on('click', '#menu-close', function() {
+                $('nav .navigation ul').removeClass('active');
+            });
+        });
+        emailjs.init('pfaEeJsBRk-Conn1Q');
+        function sendEmail(event) {
+          event.preventDefault(); // Prevent the form from submitting
+
+          const form = event.target; // Get the form element
+          const formData = new FormData(form); // Create a FormData object from the form
+
+          // Use the emailjs library to send the email
+          window.emailjs.send('service_3vdsozd', 'Supriya_1904', {
+            from_name: formData.get('name'),
+            reply_to: formData.get('email'),
+            subject: formData.get('subject'),
+            message_html: formData.get('message')
+          })
+          .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            form.reset();
+        
+          }, function(error) {
+            console.log('FAILED...', error);
+          });
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="images/logo.png" alt="Kingsbridge Acadamy">
+        <div class="navigation">
+
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="facility.html">Facility</a></li>
+
+                <li><a class="active" href="contact.html">Contact</a></li>
+
+            </ul>
+            <img id="menu-btn" src="images/menu.png" alt="">
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="about-home">
+        <h2>Contact Us</h2>
+    </section>
+
+    <section id="contact">
+        <div class="getin">
+            <h2>Get in touch</h2>
+            <p>Looking for help? Fill the form and start a new adventure</p>
+            <div class="getin-details">
+                <h3>Headquaters</h3>
+                <div>
+                    <i id="log" class="fas fa-home get"></i>
+                    <p>Kingsbridge Academy school Pirpainti, Bihar, India 813209</p>
+                </div>
+
+                <h3>Phone</h3>
+                <div>
+                    <i id="log" class="fas fa-phone-alt get"></i>
+                    <p>+91 9122391118 <br> +91 7004127841
+                    </p>
+                </div>
+
+                <h3>Support</h3>
+                <div>
+                    <i id="log" class="fas fa-envelope-open-text get"></i>
+                    <p>kingsbridgeacademy2019@gmail.com <br> brbenterprises8@gmail.com</p>
+                </div>
+
+                <h3>Follow us</h3>
+                <div class="pro-links">
+                    <i id="icon" class="fab fa-facebook-f"></i>
+                    <i id="icon" class="fab fa-instagram"></i>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="form">
+            <h4>Let's Connect</h4>
+            <p>Have any Question? Let us know</p>
+            <form onsubmit="sendEmail(event)">
+                <div class="form-row">
+                  <input placeholder="Name" type="text" name="name" required />
+                  <input placeholder="Email" type="email" name="email" required />
+                </div>
+                <div class="form-col">
+                  <input placeholder="Subject" type="text" name="subject" required />
+                </div>
+                <div class="form-col">
+                  <textarea name="message" placeholder="How can we Help?" required></textarea>
+                </div>
+                <div class="form-col">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+              
+
+              
+            </div>
+        </div>
+    </section>    
+
+    <!-- Map  -->
+    <section id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.403232030234!2d87.42577157410419!3d25.32424672654536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f00dec277764e3%3A0xc9ab8f9a828695bb!2sKingsbridge%20Academy%2Cchandpur%20pirpanti!5e0!3m2!1sen!2sin!4v1683212241714!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer  -->
+    <footer>
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <li>
+                Kingsbridge Acadamy
+            </li>
+            <li>
+                Chandpur, Pirpainti
+            </li>
+            <li>
+                Bihar, India - 813209
+            </li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Classes</h3>
+            <li>
+                Nursury - Class 3
+            </li>
+            <li>
+                Class 4 - 7
+            </li>
+            <li>
+                Class 8 - 10
+            </li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Knowledge Hub</h3>
+            <li>
+                Student Hub
+            </li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>
+                You can trust us. We only send school details
+            </p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email address" id="emailInput">
+                <button href="#" id="subscribeBtn" onclick="clearInput()">SUBSCRIBE</button>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>
+                Copyright &copy;2021 All rights reserved | This website is made by Supriya Kumari
+            </p>
+            <div class="pro-links">
+                <a href="https://www.facebook.com/kingsbridge2019"><i id="footer-icon" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kingsbridgeacademyschool/?igshid=ZDdkNTZiNTM%3D"><i id="footer-icon" class="fab fa-instagram"></i></a>
+              </div>
+
+        </div>
+        
+
+    </footer>
+
+    <script>
+        $('#menu-btn').click(function() {
+            $('nav .navigation ul').addClass('active')
+        })
+        // $('#menu-close').click(function() {
+            // $('nav .navigation ul').removeClass('active');
+        // });
+
+
+    </script>
+</body>
+</html>

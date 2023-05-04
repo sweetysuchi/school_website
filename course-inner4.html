@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingsbridge Acadamy</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <script src="./node_modules/@emailjs/browser/umd/email.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('nav').on('click', '#menu-close', function() {
+                $('nav .navigation ul').removeClass('active');
+            });
+        });
+        function clearInput() {
+            document.getElementById("emailInput").value = "";
+
+        }
+
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="images/logo.png" alt="Kingsbridge Acadamy">
+        <div class="navigation">
+
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="course.html">Course</a></li>
+                <li><a href="facility.html">Facility</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+            <img id="menu-btn" src="images/menu.png" alt="">
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="about-home">
+        <h2>Enroll In Class 4</h2>
+    </section>
+
+    <section id="course-inner">
+        <div class="overview">
+            <img class="course-img" src="images/class4.jpg" alt="">
+            <div class="course-head">
+                <div class="c-name">
+                    <h2>Class 4 Course</h2>
+                    <div class="star">
+                        <i class="fas fa-star" id="st"></i>
+                        <i class="fas fa-star" id="st"></i>
+                        <i class="fas fa-star" id="st"></i>
+                        <i class="fas fa-star" id="st"></i>
+                        <i class="far fa-star" id="st"></i>
+                    </div>
+                    <p>Get ready to explore and learn with our Class 4 Course</p>
+
+                </div>
+                <span>&#x20b9; 12,999</span>
+            </div>
+
+            <hr>
+            <h3>Course Overview</h3>
+            <p>Our class 4 curriculum at our school is designed to provide students with a strong foundation in key academic subjects such as mathematics, science, English language arts, and social studies. In addition, students will have opportunities to develop their critical thinking, problem-solving, and communication skills through a range of engaging and challenging learning activities. Our teachers use a variety of instructional methods, including group work, hands-on projects, and technology-enhanced learning, to create a dynamic and interactive learning environment. At this level, we also focus on developing good study habits and fostering a love of learning that will stay with students throughout their academic journey.</p>
+            <hr>
+            <h3>What will the child learn</h3>
+            <div class="learn">
+                <p><i id="tick" class="fas fa-check-circle"></i> Fractions, decimals, measurements, geometry, and data handling</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Basic concepts of plants, animals, the human body & the solar system</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Reading and comprehension, basic grammar, vocabulary building, and creative writing</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Basic concepts of history, geography, and civics</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Development of fine motor skills, creativity, imagination through various art and craft activities</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Basic exercises, yoga, and sports to promote physical fitness and overall well-being</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Basic knowledge of computers, software applications, and coding fundamentals</p>
+
+
+
+            </div>
+        </div>
+        <div class="enroll">
+            <h3>This course includes:</h3>
+            <p><i id="list" class="fas fa-newspaper"></i>50 Articles</p>
+            <p><i id="list" class="fas fa-infinity"></i>One Year Access</p>
+            <p><i id="list" class="fas fa-paperclip"></i>Assignments</p>
+            <p><i id="list" class="fas fa-certificate"></i>Report Card</p>
+            <div class="enroll-btn">
+                <a class="blue" href="#">Enroll Courses</a>
+            </div>
+
+
+        </div>
+    </section>
+    
+
+    <!-- Footer  -->
+    <footer>
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <li>
+                Kingsbridge Acadamy
+            </li>
+            <li>
+                Chandpur, Pirpainti
+            </li>
+            <li>
+                Bihar, India - 813209
+            </li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Classes</h3>
+            <li>
+                Nursury - Class 3
+            </li>
+            <li>
+                Class 4 - 7
+            </li>
+            <li>
+                Class 8 - 10
+            </li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Knowledge Hub</h3>
+            <li>
+                Student Hub
+            </li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>
+                You can trust us. We only send school details
+            </p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email address" id="emailInput">
+                <button href="#" id="subscribeBtn" onclick="clearInput()">SUBSCRIBE</button>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>
+                Copyright &copy;2021 All rights reserved | This website is made by Supriya Kumari
+            </p>
+            <div class="pro-links">
+                <a href="https://www.facebook.com/kingsbridge2019"><i id="footer-icon" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kingsbridgeacademyschool/?igshid=ZDdkNTZiNTM%3D"><i id="footer-icon" class="fab fa-instagram"></i></a>
+              </div>
+
+        </div>
+        
+
+    </footer>
+
+    <script>
+        $('#menu-btn').click(function() {
+            $('nav .navigation ul').addClass('active')
+        })
+        // $('#menu-close').click(function() {
+            // $('nav .navigation ul').removeClass('active');
+        // });
+
+
+    </script>
+</body>
+</html>

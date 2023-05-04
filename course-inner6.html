@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingsbridge Acadamy</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <script src="./node_modules/@emailjs/browser/umd/email.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('nav').on('click', '#menu-close', function() {
+                $('nav .navigation ul').removeClass('active');
+            });
+        });
+        function clearInput() {
+            document.getElementById("emailInput").value = "";
+
+        }
+
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <img src="images/logo.png" alt="Kingsbridge Acadamy">
+        <div class="navigation">
+
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="course.html">Course</a></li>
+                <li><a href="facility.html">Facility</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+            <img id="menu-btn" src="images/menu.png" alt="">
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="about-home">
+        <h2>Enroll In Class 6</h2>
+    </section>
+
+    <section id="course-inner">
+        <div class="overview">
+            <img class="course-img" src="images/class6.jpg" alt="">
+            <div class="course-head">
+                <div class="c-name">
+                    <h2>Class 6 Course</h2>
+                    <div class="star">
+                        <i class="fas fa-star" id="st"></i>
+                        <i class="fas fa-star" id="st"></i>
+                        <i class="fas fa-star" id="st"></i>
+                        <i class="fas fa-star" id="st"></i>
+                        <i class="far fa-star" id="st"></i>
+                    </div>
+                    <p>Discover, learn and grow with our class 6 curriculum</p>
+
+                </div>
+                <span>&#x20b9; 12,999</span>
+            </div>
+
+            <hr>
+            <h3>Course Overview</h3>
+            <p>Our Class 6 course at our school is designed to provide a well-rounded education and develop important skills such as critical thinking, problem-solving, and effective communication. The curriculum includes subjects like Mathematics, Science, English, Social Studies, and Languages, with a focus on practical application and hands-on learning experiences. Students are also exposed to extracurricular activities that enhance their creativity, physical fitness, and social skills</p>
+            <hr>
+            <h3>What will the child learn</h3>
+            <div class="learn">
+                <p><i id="tick" class="fas fa-check-circle"></i> Learn about fractions, decimals, and percentages, geometry and basic algebraic concepts</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Topics such as Earth's systems, energy, matter, and living organisms, among others</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Learn about different cultures, societies, world history, geography, and economics concepts</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Reading comprehension, writing, communication skills, with an emphasis on critical thinking</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Learn a second language, develop their artistic and musical talents</p>
+                <p><i id="tick" class="fas fa-check-circle"></i> Participate in physical education and sports programs</p>
+
+
+
+            </div>
+        </div>
+        <div class="enroll">
+            <h3>This course includes:</h3>
+            <p><i id="list" class="fas fa-newspaper"></i>50 Articles</p>
+            <p><i id="list" class="fas fa-infinity"></i>One Year Access</p>
+            <p><i id="list" class="fas fa-paperclip"></i>Assignments</p>
+            <p><i id="list" class="fas fa-certificate"></i>Report Card</p>
+            <div class="enroll-btn">
+                <a class="blue" href="#">Enroll Courses</a>
+            </div>
+
+
+        </div>
+    </section>
+    
+
+    <!-- Footer  -->
+    <footer>
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <li>
+                Kingsbridge Acadamy
+            </li>
+            <li>
+                Chandpur, Pirpainti
+            </li>
+            <li>
+                Bihar, India - 813209
+            </li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Classes</h3>
+            <li>
+                Nursury - Class 3
+            </li>
+            <li>
+                Class 4 - 7
+            </li>
+            <li>
+                Class 8 - 10
+            </li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Knowledge Hub</h3>
+            <li>
+                Student Hub
+            </li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>
+                You can trust us. We only send school details
+            </p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email address" id="emailInput">
+                <button href="#" id="subscribeBtn" onclick="clearInput()">SUBSCRIBE</button>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>
+                Copyright &copy;2021 All rights reserved | This website is made by Supriya Kumari
+            </p>
+            <div class="pro-links">
+                <a href="https://www.facebook.com/kingsbridge2019"><i id="footer-icon" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kingsbridgeacademyschool/?igshid=ZDdkNTZiNTM%3D"><i id="footer-icon" class="fab fa-instagram"></i></a>
+              </div>
+
+        </div>
+        
+
+    </footer>
+
+    <script>
+        $('#menu-btn').click(function() {
+            $('nav .navigation ul').addClass('active')
+        })
+        // $('#menu-close').click(function() {
+            // $('nav .navigation ul').removeClass('active');
+        // });
+
+
+    </script>
+</body>
+</html>
