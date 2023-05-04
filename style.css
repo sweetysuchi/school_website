@@ -1131,4 +1131,31 @@ footer .copyright .pro-links #footer-icon:hover {
         width: 100%;
     }
 
+    #director {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #director .about-img {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 20px;
+    }
+    #director .about-img img {
+        width: 100%;
+        height: 400px;
+        border-radius: 25%;
+        padding: 4px 8px;
+    }
+    #director .about-text {
+        width: 100%;
+    }
+
+    #director .about-text p {
+        color: #413c3c;
+        padding: 5px;
+        font-weight: 300;
+    }
+
 }
